@@ -11,7 +11,6 @@ def performance(unit):
             t2 = time.time()
             t = (t2 - t1) * 1000 if unit == 'ms' else (t2 - t1)
             print('call %s() in %f %s' % (f.__name__, t, unit))
-
             return r
 
         return wrapper
