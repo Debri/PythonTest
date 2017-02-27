@@ -1,8 +1,9 @@
 import pymysql
 
 
+# py连接数据库
 def conn_db():
-    conn = pymysql.connect(host="127.0.0.1", user="root", password="123", db="exam", port='3306')
+    conn = pymysql.connect(host="127.0.0.1", user="root", password="123", db="exam", port=3306)
     cur = conn.cursor()
     return conn, cur
 
@@ -16,3 +17,5 @@ conn, cur = conn_db()
 cur = exe_query(cur, "SELECT * FROM account")
 for itm in cur:
     print("ID=" + str(itm[0]))
+cur.close()
+conn.close()
