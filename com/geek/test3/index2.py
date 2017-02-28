@@ -1,6 +1,7 @@
 import pymysql
 
 
+
 class MySQLCommand(object):
     def __init__(self, host, port, passwd, user, db, table):
         self.host = host
